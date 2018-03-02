@@ -1,0 +1,207 @@
+/********universal**********/
+:root {
+  --backColor:#d2dbd6;
+  --tint1:#e11f46;
+  --tint2:#8fcfd6;
+  --tint3:#040730;
+
+  --titleFont: 'Comfortaa', cursive;
+  --paraFont:Arial;
+
+  --navBarHeight:50px;
+}
+body {
+  background-color: var(--backColor);
+}
+h1 {
+  text-align:center;
+  font-family: var(--titleFont);
+}
+img {
+  width:100%;
+}
+
+.navBar {
+  background-color: var(--tint1);
+  grid-area: navBar;
+  display: inline-grid;
+  width:100%;
+  height: var(--navBarHeight);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+  .navBar section {
+    /*width:100%;
+    height:100%;*/
+  }
+  .navBar a:hover {
+    background-color: var(--tint2);
+  }
+  .navBar a section {
+    text-decoration: none;
+    font-family: var(--titleFont);
+    color:white;
+    /*text-align: center;
+    vertical-align: middle;
+    line-height: var(--navBarHeight);
+    padding-left: 40%;*/
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+/******************home page*******************/
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   min-width: 100%;
+   min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+   width: 200px;
+   font-size: 18px;
+   padding: 10px;
+   border: none;
+   background: #000;
+   color: #fff;
+   cursor: pointer;
+   position: relative;
+   float: left;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+#myBtn:hover {
+   background: #ddd;
+   color: black;
+}
+
+
+.homeFormat {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "navBar navBar"
+    "logo logo"
+    "download download"
+}
+.logo {
+  grid-area: logo;
+  margin-bottom: 10%;
+}
+.logo h1{
+  font-family: var(--titleFont);
+  font-size: 500%;
+}
+.download {
+  grid-area: download;
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.download p {
+  text-align: center;
+}
+/********contact**********/
+.contactFormat {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "navBar navBar"
+    "mom dad"
+    "T joseph"
+    "comment comment"
+}
+  .contactFormat div{
+    margin:20%;
+  }
+#mom {
+  grid-area:mom;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+#dad {
+  grid-area:dad;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+#T {
+  grid-area:T;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+#joseph {
+  grid-area:joseph;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+#commentSection {
+  grid-area:comment;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+form {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "name email"
+    "comments comments"
+    "send send";
+  grid-gap:20px;
+}
+  form .name {
+    grid-area:name;
+  }
+  form .email {
+    grid-area:email;
+  }
+  form .comments {
+    grid-area:comments;
+    height:50px;
+  }
+  form .send {
+    grid-area:send;
+  }
+
+/***********FAQ***************/
+.question {
+  font-family: var(--titleFont);
+  font-size: 30px;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+.answer {
+  font-family: var(--paraFont);
+
+  padding-left: 25%;
+  padding-right: 25%;
+}
+/********VIDEOS***************/
+.vid {
+  margin:10%;
+}
+.vid video {
+  width:100%;
+}
+/********************Book Club*********************/
+.entry {
+  padding-left: 20%;
+  padding-right: 20%;
+}

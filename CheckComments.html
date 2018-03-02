@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="maryStyle.css">
+<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+</head><title>Mary's Title</title>
+<body class="contactFormat">
+
+  <div id="commentSection">
+    <h1>Ask us a question or<br>Leave a comment</h1>
+    <form v-on:submit.prevent="addComment">
+        <input class="name" v-model="addedName" placeholder="Your Name"><br>
+        <textarea class="comments" v-model="addedComment" placeholder="Comments"></textarea><br>
+        <button class="send" type="submit">Add Comment</button>
+    </form>
+    <div v-for="comment in comments[number]">
+      <hr>
+      <p>{{comment.text}}</p>
+      <p><i>-- {{comment.author}}</i></p>
+      <p>{{comment.date}}</p>
+    </div>
+    <h1>We thought these comments might be questionable.</h1>
+    <p>If you want to remove these comments, click the delete button below them</p>
+    <div v-for="comment in questionableComment[number]">
+      <hr>
+      <p>{{comment}}</p>
+
+      <form>
+        <button class="delete" type="submit" >DELETE!</button>
+      </form>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+  <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
